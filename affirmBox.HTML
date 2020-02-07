@@ -1,0 +1,20 @@
+confirm("⽂本");
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script>
+function display_confirm() {
+var info = confirm("请点击按钮")
+if (info === true) {
+alert("您点击了确认按键!");
+ } else {
+alert("您点击了取消按钮！");
+ }
+ }
+</script> 
+<input type="button" value="点击即送确认框" onclick="display_confirm()">
+</body>
+</html>
