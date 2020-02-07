@@ -1,0 +1,20 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+<script>
+ var c = 0;
+ var t;
+ function infinityDemo() {
+ document.getElementById("txt").value = c;
+ c = c + 1;
+ t = setTimeout("infinityDemo()",1000);
+ }
+</script>
+<form>
+ <input type="button" value="开始计时" onclick="infinityDemo()">
+ <input type="text" id="txt">
+</form>
+</body>
+</html>
