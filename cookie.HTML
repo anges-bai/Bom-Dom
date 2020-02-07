@@ -1,0 +1,36 @@
+
+<html>
+<head>
+<script src="Test.js"></script> <meta charset="UTF-8">
+</head> 
+// 获取cookie
+function getCookie(name) {
+if (document.cookie.length > 0) {
+start = document.cookie.indexOf(name + "=");
+if (start != -1) {
+start = start + name.length + 1;
+end = document.cookie.indexOf(";",start);
+if (end == -1) {
+end = document.cookie.length;
+ }
+return decodeURIComponent(document.cookie.substring(start,end));
+ }
+ }
+return "";
+}
+// 检查cookie
+function checkCookie() {
+userName = getCookie('userName');
+if (userName != null && userName != "") {
+alert("欢迎 " + userName + " 再来!");
+ }else {
+userName = prompt('请输⼊⽤户名:',"");
+if (userName != null && userName != "") {
+setCookie('userName',userName,365);
+ }
+ }
+}
+<body onload="checkCookie()">
+</body>
+</html>
+
